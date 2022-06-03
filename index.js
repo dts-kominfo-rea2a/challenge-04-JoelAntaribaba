@@ -21,7 +21,7 @@ const createDate = (dates, index) => {
     for (let i = 0; i < dates.length; i++) {
       all.push(Date.parse(dates[i]) / 1000);
     }
-    let allDates = all.join("-");
+    let allDates = all.sort().join("-");
     return allDates;
   }
 };
