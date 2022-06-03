@@ -16,12 +16,12 @@ const createDate = (dates, index) => {
     for (let i = 0; i < dates.length; i++) {
       all.push(Math.round(Date.parse(dates[i]) / 1000));
     }
-    return String(all[index]);
+    return all[index].toString();
   } else {
     for (let i = 0; i < dates.length; i++) {
       all.push(Date.parse(dates[i]) / 1000);
     }
-    return String(all.sort().join("-"));
+    return all.sort().join("-");
   }
 };
 
