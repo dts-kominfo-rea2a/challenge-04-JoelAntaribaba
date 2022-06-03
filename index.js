@@ -12,17 +12,17 @@ const dates = [
 const createDate = (dates, index) => {
   let all = [];
 
-  if (index) {
+  if (index || index === 0) {
     for (let i = 0; i < dates.length; i++) {
       all.push(Math.round(Date.parse(dates[i]) / 1000));
     }
+    all.sort();
     return String(all[index]);
   } else {
     for (let i = 0; i < dates.length; i++) {
       all.push(Date.parse(dates[i]) / 1000);
     }
-    let allDates = String(all.sort().join("-"));
-    return allDates;
+    return String(all.sort().join("-"));
   }
 };
 
