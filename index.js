@@ -16,7 +16,7 @@ const createDate = (dates, index) => {
     for (let i = 0; i < dates.length; i++) {
       all.push(Math.round(Date.parse(dates[i]) / 1000));
     }
-    all.sort();
+    // all.sort();
     return String(all[index]);
   } else {
     for (let i = 0; i < dates.length; i++) {
